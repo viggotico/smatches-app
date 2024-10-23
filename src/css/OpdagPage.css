@@ -1,0 +1,242 @@
+.sections section {
+    width: 100%;
+    height: fit-content;
+}
+
+.opdag-gallery {
+    position: relative;
+    justify-content: space-between;
+    overflow-y: hidden;
+    height: calc(var(--section-height) - 20px) !important;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.opdag-gallery-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.opdag-gallery-background div {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.opdag-gallery-background-seekLeft,
+.opdag-gallery-background-seekRight {
+    width: 50vw !important;
+    z-index: 1;
+}
+
+.opdag-gallery-background-seekRight {
+    left: unset !important;
+    right: 0 !important;
+}
+
+.opdag-imageIndicatorWrapper {
+    width: 100%;
+    height: 7px;
+    gap: 10px;
+    z-index: 1;
+}
+
+.opdag-imageIndicator {
+    width: auto;
+    height: 100%;
+    min-width: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    flex: 0 1 100%;
+}
+
+.opdag-imageIndicatorHighlight {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.opdag-gallery-bottom {
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(transparent 5%, rgba(0, 0, 0, 0.6) 70%);
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+.opdag-gallery-info {
+    width: 100%;
+    align-items: flex-start !important;
+    font-size: 1rem;
+    line-height: 1cap;
+}
+
+.opdag-gallery-info-text {
+    font-size: 1em;
+    gap: 0px;
+}
+
+.opdag-gallery-info-text svg {
+    height: 1rem;
+}
+
+.opdag-gallery-info-name {
+    font-size: 2em;
+    line-height: 1cap;
+}
+
+.opdag-gallery-buttons {
+    width: 100%;
+}
+
+.opdag-gallery-buttons button {
+    flex: 0 1 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    background-color: var(--color-blur);
+    backdrop-filter: blur(15px);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+.opdag-gallery-buttons button:hover {
+    background-color: var(--color-main-active);
+}
+
+.opdag-gallery-smatch-stinger {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 5;
+    animation-name: opdag-gallery-smatch-stinger-show;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.opdag-gallery-smatch-stinger-text {
+    z-index: 1;
+}
+
+.opdag-gallery-smatch-stinger-text span {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.opdag-gallery-smatch-stinger-mutual {
+    width: 100%;
+}
+
+.opdag-gallery-smatch-stinger-mutual-profiles {
+    gap: 15px;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    animation-name: opdag-gallery-smatch-stinger-mutual-profiles;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.opdag-gallery-smatch-stinger-mutual-profiles div {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 3px solid white;
+    background-position: center center;
+    background-size: cover;
+    background-color: gray;
+}
+
+@keyframes opdag-gallery-smatch-stinger-mutual-profiles {
+    0% {
+        gap: 100px;
+    }
+    100% {
+        gap: 15px;
+    }
+}
+
+.opdag-gallery-smatch-stinger-mutual-action {
+    width: 100%;
+}
+
+.opdag-gallery-smatch-stinger-mutual-action-buttons {
+    width: 70%;
+}
+
+.opdag-gallery-smatch-stinger-background {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation-name: opdag-gallery-smatch-stinger-background-show;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes opdag-gallery-smatch-stinger-show {
+    0% {
+        opacity: 0;
+    }
+    20%, 70% {
+        opacity: 1;
+    }
+    90%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opdag-gallery-smatch-stinger-background-show {
+    0% {
+        filter: brightness(1) grayscale(0);
+    }
+    20%, 70% {
+        filter: brightness(0.2) grayscale(1);
+    }
+    90%, 100% {
+        filter: brightness(0.2) grayscale(1);
+    }
+}
+
+@keyframes opdag-gallery-smatch-stinger-mutual-show {
+    0% {
+        opacity: 0;
+    }
+    20%, 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opdag-gallery-smatch-stinger-mutual-hide {
+    0% {
+        opacity: 1;
+    }
+    80%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opdag-gallery-smatch-stinger-mutual-background-show {
+    0% {
+        filter: brightness(1) grayscale(0);
+    }
+    20%, 100% {
+        filter: brightness(0.2) grayscale(1);
+    }
+}

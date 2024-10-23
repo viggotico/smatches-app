@@ -1,0 +1,65 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.navTop {
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    background-color: var(--color-main);
+    position: sticky;
+    width: calc(100vw - 20px);
+    padding: 10px 10px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navTop .icons {
+    width: auto;
+    height: 35px;
+}
+
+.navTop svg:hover {
+    color: var(--color-secondary);
+}
+
+.navBottom {
+    width: 100%;
+    background-color: var(--color-main);
+    position: fixed;
+    gap: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navBottomItem {
+    width: calc(25% - 40px);
+    height: auto;
+    aspect-ratio: 1/1;
+    padding: 20px;
+    gap: 5px;
+    font-size: 0.8rem;
+}
+
+.navBottomItemIcons {
+    width: auto !important;
+    height: 40px !important;
+}
+
+.navBottomItemActive {
+    background-color: var(--color-main-active);
+}
+
+.outlet {
+    width: calc(100vw - 20px);
+    padding: 0 10px;
+    max-height: var(--section-height);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
