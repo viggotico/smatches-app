@@ -1,0 +1,83 @@
+.profile-section {
+  background-color: #1c1c1c; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Full page height */
+}
+
+.profile-header {
+  text-align: right; 
+  font-size: 0.8rem;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.profile-picture {
+  width: 170px;
+  height: 170px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* To kolonner */
+  gap: 10px; /* Mellemrum mellem kolonnerne */
+  background-color: #2e2e2e; /* Mørk baggrund */
+  padding: 20px;
+  border-radius: 10px;
+  width: 39%;
+}
+
+.profile-info p {
+  margin: 5px 0; /* Mellemrum mellem rækker */
+  color: #9a9a9a; /* Lysere grå til labels */
+  padding-bottom: 5px; /* Plads til linjen */
+  border-bottom: 1px solid #444; /* Linje under teksten */
+}
+
+.profile-info strong {
+  color: #ffffff; /* Hvid tekst til værdier */
+  text-align: right; /* Tekst højrejusteres for værdier */
+}
+
+.profile-options {
+  margin-top: 30px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #2e2e2e;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.option p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 20px;
+}
