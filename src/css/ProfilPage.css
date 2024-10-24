@@ -11,6 +11,13 @@
   font-size: 0.8rem;
 }
 
+.settings-link {
+  text-decoration: none; /* Fjerner understregningen */
+  color: white; /* Farve på teksten */
+  font-size: 2em; /* Størrelsen matcher en h1 */
+  font-weight: bold; /* Gør teksten fed */
+}
+
 .profile-container {
   display: flex;
   align-items: center;

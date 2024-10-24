@@ -10,7 +10,9 @@ export const ProfilPage = () => {
   return (
     <div className="profile-section">
       <div className="profile-header">
-        <h1>Settings</h1>
+        <a href="profil-settings" className="settings-link">
+          Settings
+        </a>
       </div>
       <div className="profile-container">
         <div className="profile-picture-container">
@@ -46,7 +48,7 @@ export const ProfilPage = () => {
         </div>
         <div className="option">
           <p>Log out</p>
-          <div className="icon">⬅️</div>
+          <div className="icon">⬅</div>
         </div>
       </div>
     </div>
