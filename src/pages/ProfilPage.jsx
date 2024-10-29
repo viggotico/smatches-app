@@ -40,15 +40,23 @@ export const ProfilPage = () => {
       <div className="profile-options">
         <div className="option">
           <p>Push-Notifikations</p>
-          <div className="icon">🔔</div>
+          <div className="icon">📳</div>
         </div>
         <div className="option">
           <p>Help and Support</p>
-          <div className="icon">❓</div>
+          <div className="icon">⁇</div>
         </div>
         <div className="option">
           <p>Log out</p>
           <div className="icon">⬅</div>
+        </div>
+        <div className="option1">
+          <p>
+            Ved brug af denne app accepterer du vores vilkår og
+            privatlivspolitik. Vi beskytter dine data og bruger dem kun til at
+            forbedre din oplevelse. For mere information,{" "}
+            <a className="optionp">tryk her.</a>
+          </p>
         </div>
       </div>
     </div>

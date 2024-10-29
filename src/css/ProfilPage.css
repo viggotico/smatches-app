@@ -75,7 +75,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   background-color: #2e2e2e;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -87,4 +87,32 @@
 
 .icon {
   font-size: 20px;
+}
+
+.option1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 190px;
+  align-items: center;
+  padding: 30px;
+  background-color: #2e2e2e;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%; /* Begrænser bredden til skærmen */
+  box-sizing: border-box; /* Sørger for, at padding bliver inkluderet i bredden */
+}
+
+.option1 p {
+  margin: 0;
+  color: #a79c9c;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  font-size: 0.2rem; /* Øger fontstørrelsen */
+  text-align: justify;
+  max-width: 90%; /* Begrænser bredden af teksten til lidt mindre end boksens fulde bredde */
+  line-height: 1.5; /* Giver mere plads mellem linjerne, så teksten fylder mere vertikalt */
+}
+
+.optionp{
+  color: aqua;
 }
