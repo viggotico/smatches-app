@@ -1,0 +1,131 @@
+.outlet{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+div.scrollmenu {
+    background-color: #38414D;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 8px 0px;
+    border-radius: 22px;
+}
+
+.profile-card {
+    position: relative;
+    display: inline-block; 
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; 
+    margin: 0 10px; 
+    vertical-align: top; 
+    /* text-align: center; */
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; 
+}
+
+.profile-info-container {
+    position: absolute; 
+    top: 156px;
+    left: 0;
+    width: 100%; 
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+    border-radius: 10px 10px 0 0; 
+    align-self: flex-end; 
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.profile-distance, .profile-location, .profile-name-age {
+    margin: 5px 0;
+}
+
+.action-button {
+    background-color: #38414D;
+    color: white;
+    padding: 6px 12px; 
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    align-self: flex-end; 
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #f06292;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+
+
+/* beskder */
+
+.message-container{
+    background-color: #38414D;
+    border-radius: 10px;
+    padding: 2%;
+   
+}
+.row-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 4%;
+}
+.row-2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mesg-box-container{
+  
+    background-color: white;
+    border-radius: 10px;
+        
+}
+.mesg-box-container img{
+    height: auto;
+    width: 13%;
+    border-radius: 50%;
+}
+
+.info-msg-contianer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+.img-text-container{
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+    
+}
+
+.info-msg-contianer, h2, p {
+    color: black;
+}
