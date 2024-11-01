@@ -1,0 +1,77 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  color: #fff;
+  background-color: #1e1e2e;
+  font-family: Arial, sans-serif;
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-image,
+.empty-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+}
+
+.important {
+  color: #ff6961; /* Red color to highlight */
+}
+
+.about-me-section,
+.goals-section,
+.traits-section,
+.height-section,
+.extra-section {
+  margin-bottom: 20px;
+}
+
+.about-me-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.goal-options {
+  display: flex;
+  gap: 10px;
+}
+
+.goal-option {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.traits-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.height-section input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}

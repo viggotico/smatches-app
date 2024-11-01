@@ -1,9 +1,7 @@
 .profile-section {
-  background-color: #1c1c1c; /* Dark background */
-  color: #ffffff; /* White text */
-  padding: 20px;
+  position: relative;
+  height: var(--section-height);
   font-family: Arial, sans-serif;
-  min-height: 100vh; /* Full page height */
 }
 
 .profile-header {
@@ -19,10 +17,9 @@
 }
 
 .profile-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
+ display: flex;
+ flex-direction: row;
+    justify-content: flex-start;
 }
 
 .profile-picture-container {
@@ -52,7 +49,7 @@
   background-color: #2e2e2e; /* Mørk baggrund */
   padding: 20px;
   border-radius: 10px;
-  width: 39%;
+  width: 100%;
 }
 
 .profile-info p {
@@ -68,7 +65,7 @@
 }
 
 .profile-options {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .option {
@@ -92,7 +89,7 @@
 .option1 {
   display: flex;
   justify-content: center;
-  margin-top: 190px;
+  margin-top: 200px;
   align-items: center;
   padding: 30px;
   background-color: #2e2e2e;

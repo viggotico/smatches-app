@@ -9,11 +9,7 @@ export const ProfilPage = () => {
 
   return (
     <div className="profile-section">
-      <div className="profile-header">
-        <a href="profil-settings" className="settings-link">
-          Settings
-        </a>
-      </div>
+      <div className="profile-header"></div>
       <div className="profile-container">
         <div className="profile-picture-container">
           <img src={profilePicture} alt="Profile" className="profile-picture" />
@@ -50,14 +46,13 @@ export const ProfilPage = () => {
           <p>Log out</p>
           <div className="icon">⬅</div>
         </div>
-        <div className="option1">
-          <p>
-            Ved brug af denne app accepterer du vores vilkår og
-            privatlivspolitik. Vi beskytter dine data og bruger dem kun til at
-            forbedre din oplevelse. For mere information,{" "}
-            <a className="optionp">tryk her.</a>
-          </p>
-        </div>
+      </div>
+      <div className="option1">
+        <p>
+          Ved brug af denne app accepterer du vores vilkår og privatlivspolitik.
+          Vi beskytter dine data og bruger dem kun til at forbedre din
+          oplevelse. For mere information, <a className="optionp">tryk her.</a>
+        </p>
       </div>
     </div>
   );

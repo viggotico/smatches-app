@@ -4,6 +4,7 @@ import { RootLayout } from "./components/RootLayout";
 import { LikesPage } from "./pages/LikesPage";
 import { SmatchesPage } from "./pages/SmatchesPage";
 import { ProfilPage } from "./pages/ProfilPage";
+import { SettingsPage } from "./pages/SettingsPage";
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
           <Route path="/smatches" element={<SmatchesPage />} />
           <Route path="/likes" element={<LikesPage />} />
           <Route path="/profil" element={<ProfilPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
 
           {/* andre */}
 
