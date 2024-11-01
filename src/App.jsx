@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { LoginPage } from "./pages/LoginPage";
 import { OpdagPage } from "./pages/OpdagPage";
 import { RootLayout } from "./components/RootLayout";
 import { LikesPage } from "./pages/LikesPage";
@@ -8,6 +9,7 @@ import { ProfilPage } from "./pages/ProfilPage";
 export const App = () => {
   return <BrowserRouter>
     <Routes>
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<RootLayout />}>
         <Route index element={<OpdagPage />} />
         <Route path="/smatches" element={<SmatchesPage />} />
