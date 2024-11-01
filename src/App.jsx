@@ -4,7 +4,7 @@ import { RootLayout } from "./components/RootLayout";
 import { LikesPage } from "./pages/LikesPage";
 import { SmatchesPage } from "./pages/SmatchesPage";
 import { ProfilPage } from "./pages/ProfilPage";
-import { SettingsPage } from '/src/pages/SettingsPage.jsx?t=1730471040219';
+import { SettingsPage } from './pages/SettingsPage';
 
 
 
