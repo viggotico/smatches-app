@@ -1,21 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/SettingsPage.css";
 import profilePicture from "../assets/people/self/pexels-jonaorle-5673896.jpg"; // Ensure the path is correct
 
+
 export const SettingsPage = () => {
+  const [selectedPicture, setSelectedPicture] = useState(profilePicture);
+  const [selectedGoal, setSelectedGoal] = useState("");
+  const [selectedTraits, setSelectedTraits] = useState([]);
+  const [height, setHeight] = useState("");
+
+  // Funktion til upload af billede
+  const handlePictureUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedPicture(URL.createObjectURL(file));
+    }
+  };
+
+  // Funktion til valg af dating mål
+  const handleGoalClick = (goal) => {
+    setSelectedGoal(goal);
+  };
+
+  // Funktion til valg/fravalg af "toxic traits"
+  const toggleTrait = (trait) => {
+    setSelectedTraits((prevTraits) =>
+      prevTraits.includes(trait)
+        ? prevTraits.filter((t) => t !== trait)
+        : [...prevTraits, trait]
+    );
+  };
+
+  // Funktion til højde input
+  const handleHeightChange = (event) => {
+    const value = event.target.value;
+    if (!isNaN(value) && value <= 300) {
+      // Tjekker om værdien er et tal under 300
+      setHeight(value);
+    }
+  };
+
   return (
     <div className="profile-form">
       {/* Image Section */}
       <div className="image-section">
         <div className="profile-image important">
-          <img src={profilePicture} alt="Profile" className="profile-pic" />
-          Tilføj billede
+          <label htmlFor="file-upload">
+            <img src={selectedPicture} alt="Profile" className="profile-pic" />
+            Tilføj billede
+          </label>
+          <input
+            type="file"
+            id="file-upload"
+            accept="image/*"
+            style={{ display: "none" }}
+            onChange={handlePictureUpload}
+          />
         </div>
-        <div className="empty-image" />
-        <div className="empty-image" />
-        <div className="empty-image" />
-        <div className="empty-image" />
-        <div className="empty-image" />
+        {[...Array(5)].map((_, i) => (
+          <div key={i} className="empty-image" />
+        ))}
       </div>
 
       {/* About Me Section */}
@@ -28,18 +72,25 @@ export const SettingsPage = () => {
       <div className="goals-section">
         <label className="section-label">Dating-Mål</label>
         <div className="goal-options">
-          <button className="goal-option">
-            👩‍❤️‍👨
-            <br />
-            Noget seriøst
-          </button>
-          <button className="goal-option">
-            🤷‍♂️ <br /> I don't know
-          </button>
-          <button className="goal-option">
-            😈 <br />
-            Noget casual
-          </button>
+          {["Noget seriøst", "I don't know", "Noget casual"].map(
+            (goal, index) => (
+              <button
+                key={index}
+                className={`goal-option ${
+                  selectedGoal === goal ? "active" : ""
+                }`}
+                onClick={() => handleGoalClick(goal)}
+              >
+                {goal === "Noget seriøst"
+                  ? "👩‍❤️‍👨"
+                  : goal === "I don't know"
+                  ? "🤷‍♂️"
+                  : "😈"}
+                <br />
+                {goal}
+              </button>
+            )
+          )}
         </div>
       </div>
 
@@ -47,9 +98,15 @@ export const SettingsPage = () => {
       <div className="traits-section">
         <label>Toxic traits</label>
         <div className="traits-options">
-          <span>Dishonesty</span>
-          <span>Gaslighting</span>
-          <span>Manipulation</span>
+          {["Dishonesty", "Gaslighting", "Manipulation"].map((trait, index) => (
+            <span
+              key={index}
+              className={selectedTraits.includes(trait) ? "active" : ""}
+              onClick={() => toggleTrait(trait)}
+            >
+              {trait}
+            </span>
+          ))}
         </div>
       </div>
 
@@ -60,6 +117,8 @@ export const SettingsPage = () => {
           type="text"
           placeholder="Tilføj højde .."
           className="height-input"
+          value={height}
+          onChange={handleHeightChange}
         />
       </div>
 

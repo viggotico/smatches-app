@@ -46,7 +46,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  opacity: 0.8;
+  opacity: 0.4;
+  margin-top: -43%;
+  margin-left: -15%;
 }
 
 .important {
@@ -73,7 +75,7 @@ label {
   font-weight: bold;
 }
 .about-me-input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   border-radius: 8px;
   border: none;
@@ -127,7 +129,7 @@ label {
 }
 
 .height-input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   border-radius: 8px;
   border: none;
@@ -144,3 +146,18 @@ label {
   text-align: center;
 }
 
+/* interactive output */
+/* Active state for goal options */
+.goal-option.active {
+  background-color: #ff6961;
+  color: #fff;
+}
+
+/* Active state for toxic traits */
+.traits-options span.active {
+  background-color: #ff6961;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
