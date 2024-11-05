@@ -4,6 +4,7 @@ import { RootLayout } from "./components/RootLayout";
 import { LikesPage } from "./pages/LikesPage";
 import { SmatchesPage } from "./pages/SmatchesPage";
 import { ProfilPage } from "./pages/ProfilPage";
+import {ChatPage} from "./pages/ChatPage"
 
 export const App = () => {
   return <BrowserRouter>
@@ -13,6 +14,8 @@ export const App = () => {
         <Route path="/smatches" element={<SmatchesPage />} />
         <Route path="/likes" element={<LikesPage />} />
         <Route path="/profil" element={<ProfilPage />} />
+        <Route path="/chat/:id" element={<ChatPage />} />
+
         
         {/* andre */}
         

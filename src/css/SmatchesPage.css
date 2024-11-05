@@ -1,3 +1,4 @@
+
 .outlet{
     display: flex;
     flex-direction: column;
@@ -29,6 +30,8 @@ div.scrollmenu {
     height: auto;
     display: block;
     border-radius: 10px; 
+    
+
 }
 
 .profile-info-container {
@@ -44,6 +47,7 @@ div.scrollmenu {
     gap: 8px; 
     border-radius: 10px 10px 0 0; 
     align-self: flex-end; 
+    
 }
 
 .profile-info {
@@ -78,6 +82,12 @@ img {
     height: auto;
     width: 100%;
 }
+.img{
+    height: 350px;
+    /* width: 100%; */
+    background-position: center center;
+    background-size: cover;
+}
 
 
 
@@ -88,6 +98,10 @@ img {
     border-radius: 10px;
     padding: 2%;
    
+}
+.p-msg{
+    height: 20px;
+    width: 260px;
 }
 .row-1{
     display: flex;
@@ -108,11 +122,21 @@ img {
     border-radius: 10px;
         
 }
-.mesg-box-container img{
+/* .mesg-box-container img{
     height: auto;
     width: 13%;
     border-radius: 50%;
+} */
+
+.icon-img{
+    height: 50px;
+    width: 500px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
 }
+
+
 
 .info-msg-contianer{
     display: flex;
@@ -123,6 +147,7 @@ img {
     display: flex;
     flex-direction: row;
     padding: 4%;
+
     
 }
 
