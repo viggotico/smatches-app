@@ -9,7 +9,37 @@
   height: auto;
 }
 
+.login-buttons {
+  width: 100%;
+}
+
 .login-buttons button {
   border: none;
+  border-radius: 10px;
   padding: 10px 15px;
+  width: 70%;
+  background-color: var(--color-main-active);
+  color: white;
+}
+
+.login-buttons-outline {
+  border: 3px solid var(--color-main-active) !important;
+  background-color: transparent !important;
+}
+
+.login-buttons button:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+.login-section footer {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  bottom: 30px;
+  margin: 0 auto;
+}
+
+.login-section footer p {
+  font-size: 10px;
+  cursor: pointer;
 }

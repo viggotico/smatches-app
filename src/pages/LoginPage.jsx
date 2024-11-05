@@ -8,11 +8,15 @@ export const LoginPage = () => {
                 <img className="login-logo" src={logo} alt="logo" />
                 Smatches
             </div>
-            <span>Tilmeld dig for at fortsætte</span>
             <div className='group-column login-buttons'>
-                <button>Fortsæt e-mail</button>
-                <button>Brug telefon nummer</button>
+                <span>Tilmeld dig for at fortsætte</span>
+                <button>Fortsæt med e-mail</button>
+                <button className='login-buttons-outline'>Brug telefon nummer</button>
             </div>
+            <footer>
+                <p>Vilkår og betingelser</p>
+                <p>Privatlivspolitik</p>
+            </footer>
         </section>
     );
 }
