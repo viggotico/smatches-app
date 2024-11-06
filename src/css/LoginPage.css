@@ -9,8 +9,16 @@
   height: auto;
 }
 
+.login-sequence {
+  width: 100%;
+}
+
 .login-buttons {
   width: 100%;
+}
+
+.login-buttons span {
+  font-size: 12px;
 }
 
 .login-buttons button {
@@ -22,6 +30,10 @@
   color: white;
 }
 
+.login-buttons button:disabled {
+  background-color: gray;
+}
+
 .login-buttons-outline {
   border: 3px solid var(--color-main-active) !important;
   background-color: transparent !important;
@@ -29,6 +41,18 @@
 
 .login-buttons button:hover {
   background-color: var(--color-secondary) !important;
+}
+
+.login-onboarding-input {
+  width: 100%;
+}
+
+fieldset {
+  width: 100%;
+}
+
+input {
+  width: 70%;
 }
 
 .login-section footer {
