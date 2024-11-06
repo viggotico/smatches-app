@@ -15,23 +15,18 @@ import {ChatPage} from "./pages/ChatPage";
 import { SettingsPage } from './pages/SettingsPage';
 
 export const App = () => {
-  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [isAuth, setIsAuth] = useState(sessionStorage.getItem("isAuth"));
 
   useEffect(() => {
-    localStorage.removeItem("isAuth");
-    localStorage.removeItem("name");
-    localStorage.removeItem("age");
-    localStorage.removeItem("email");
-    localStorage.removeItem("password");
     onAuthStateChanged(auth, user => {
       if (user) {
         if (isAuth) return;
         setIsAuth(true);
-        localStorage.setItem("isAuth", true);
+        sessionStorage.setItem("isAuth", true);
       } else {
         if (!isAuth) return;
         setIsAuth(false);
-        localStorage.removeItem("isAuth");
+        sessionStorage.removeItem("isAuth");
       }
     });
   }, []);
