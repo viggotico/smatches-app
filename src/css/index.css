@@ -40,3 +40,28 @@ body {
 .sections {
   justify-content: flex-start;
 }
+
+fieldset {
+  outline: none;
+  border: hidden;
+}
+
+fieldset span {
+  font-size: 12px;
+}
+
+input {
+  outline: none;
+  border: hidden;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+input:focus-visible {
+  outline: none;
+  border: hidden;
+}
+
+.input-invalid {
+  outline: solid rgb(201, 50, 50) !important;
+}
