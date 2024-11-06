@@ -6,6 +6,7 @@ import { LikesPage } from "./pages/LikesPage";
 import { SmatchesPage } from "./pages/SmatchesPage";
 import { ProfilPage } from "./pages/ProfilPage";
 import { SignUpPage } from "./pages/SignUpPage";
+import {ChatPage} from "./pages/ChatPage"
 import { SettingsPage } from './pages/SettingsPage';
 
 export const App = () => {
@@ -18,6 +19,7 @@ export const App = () => {
         <Route path="/smatches" element={<SmatchesPage />} />
         <Route path="/likes" element={<LikesPage />} />
         <Route path="/profil" element={<ProfilPage />} />
+        <Route path="/chat/:id" element={<ChatPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         
         {/* andre */}
