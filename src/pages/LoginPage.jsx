@@ -42,7 +42,7 @@ const LoginSequence = ({ type, changeType }) => {
                         type="email"
                         id='login-input-email-1'
                         onBlur={(e) => {
-                            sessionStorage.setItem('email', e.target?.value);
+                            localStorage.setItem('email', e.target?.value);
                             isValidInput(e);
                         }}
                         placeholder='example@email.com'
@@ -60,7 +60,7 @@ const LoginSequence = ({ type, changeType }) => {
                             type="tel"
                             id='login-input-number-1'
                             onBlur={(e) => {
-                                sessionStorage.setItem('email', e.target?.value ? `${e.target?.value}@smatches.app` : '');
+                                localStorage.setItem('email', e.target?.value ? `${e.target?.value}@smatches.app` : '');
                                 isValidInput(e);
                             }}
                             min={8}
@@ -79,7 +79,7 @@ const LoginSequence = ({ type, changeType }) => {
                         type="password"
                         id='login-input-password'
                         onBlur={(e) => {
-                            sessionStorage.setItem('password', e.target?.value);
+                            localStorage.setItem('password', e.target?.value);
                             isValidInput(e);
                         }}
                         placeholder='password'
@@ -95,7 +95,7 @@ const LoginSequence = ({ type, changeType }) => {
                             type="fname"
                             id='login-input-fname'
                             onBlur={(e) => {
-                                sessionStorage.setItem('name', e.target?.value);
+                                localStorage.setItem('name', e.target?.value);
                                 isValidInput(e);
                             }}
                             placeholder='fornavn'
@@ -112,7 +112,7 @@ const LoginSequence = ({ type, changeType }) => {
                             type="number"
                             id='login-input-number'
                             onBlur={(e) => {
-                                sessionStorage.setItem('age', e.target?.value);
+                                localStorage.setItem('age', e.target?.value);
                                 isValidInput(e);
                             }}
                             min={18}
@@ -143,8 +143,8 @@ const LoginSequence = ({ type, changeType }) => {
     }
 
     function signIn() {
-        const mail = sessionStorage.getItem('email');
-        const password = sessionStorage.getItem('password');
+        const mail = localStorage.getItem('email');
+        const password = localStorage.getItem('password');
 
         if (!mail) {
             alert('email is invalid');
@@ -179,8 +179,8 @@ const LoginSequence = ({ type, changeType }) => {
     }
 
     function handleSignUp() {
-        const mail = sessionStorage.getItem('email');
-        const password = sessionStorage.getItem('password');
+        const mail = localStorage.getItem('email');
+        const password = localStorage.getItem('password');
 
         if (!mail) {
             alert('email is invalid');
@@ -247,7 +247,7 @@ export const LoginPage = () => {
     const changeSequenceType = (type) => setSequenceType(type);
 
     async function createUser(uid, mail) {
-        const name = sessionStorage.getItem('name');
+        const name = localStorage.getItem('name');
 
         if (!name) {
             alert('name is invalid');

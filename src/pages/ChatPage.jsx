@@ -6,13 +6,13 @@ import { useRef } from "react";
 import { useEffect } from "react";
 
 const getMessagesData = (id) => {
-    const msg = sessionStorage.getItem(`chat-${id}`);
+    const msg = localStorage.getItem(`chat-${id}`);
     return msg ? JSON.parse(msg) : [];
 }
 
 const setMessagesData = (id, value) => {
     const msg = JSON.stringify(value ?? []);
-    sessionStorage.setItem(`chat-${id}`, msg);
+    localStorage.setItem(`chat-${id}`, msg);
 }
 
 export const ChatPage = () => {
