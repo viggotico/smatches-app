@@ -64,6 +64,7 @@ input {
 }
 
 .login-section footer p {
+  color: white;
   font-size: 10px;
   cursor: pointer;
 }

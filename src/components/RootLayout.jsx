@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import "../css/RootLayout.css";
 
 import TuneIcon from '@mui/icons-material/Tune';
@@ -14,8 +14,8 @@ export const RootLayout = ({ }) => {
 
     return <main>
         <nav className="group-row navTop">
-            <img className="icons" src={logo} alt="logo" />
-            <div className="group-row"><TuneIcon className="icons" /></div>
+            <Link to='/home'><img className="icons" src={logo} alt="logo" /></Link>
+            <Link to='/settings'><div className="group-row"><TuneIcon className="icons" /></div></Link>
         </nav>
         <div className="outlet">
             <Outlet />

@@ -135,7 +135,7 @@ const LoginSequence = ({ type, changeType }) => {
                     if (type === 'password') changeType('onboarding-1');
                     if (type === 'onboarding-1') changeType('onboarding-2');
                     if (type === 'onboarding-2') changeType('onboarding-3');
-                    if (type === 'onboarding-3') navigate('/');
+                    if (type === 'onboarding-3') navigate('/home');
                 }}
             >{type === 'onboarding-3' ? 'Begynd!' : 'Fortsæt'}</button>
             <button onClick={() => {

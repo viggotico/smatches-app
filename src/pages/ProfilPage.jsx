@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/ProfilPage.css"; // Make sure your CSS is properly set up
 import profilePicture from "../assets/people/self/pexels-jonaorle-5673896.jpg"; // Ensure the correct image path
+import { Link } from "react-router-dom";
 
 export const ProfilPage = () => {
   const [name, setName] = useState("Sarah");
@@ -13,7 +14,7 @@ export const ProfilPage = () => {
       <div className="profile-container">
         <div className="profile-picture-container">
           <img src={profilePicture} alt="Profile" className="profile-picture" />
-          <div className="edit-icon">✏️</div>
+          <div className="edit-icon"><Link to='/settings'>✏️</Link></div>
         </div>
         <div className="profile-info">
           <p>Navn</p>
