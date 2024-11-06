@@ -36,6 +36,8 @@ export const App = () => {
     });
   }, []);
 
+  // vercel problem https://stackoverflow.com/questions/64815012/react-router-app-works-in-dev-but-not-after-vercel-deployment
+
   return <BrowserRouter>
     <Routes>
       <Route index element={<LoginPage />} />
@@ -46,12 +48,6 @@ export const App = () => {
         <Route path="/profil" element={<ProfilPage />} />
         <Route path="/chat/:id" element={<ChatPage />} />
         <Route path="/settings" element={<SettingsPage />} />
-        
-        {/* andre */}
-        
-        {/* <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/settings" element={<SettingsPage />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
