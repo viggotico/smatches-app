@@ -204,6 +204,7 @@ const LoginSequence = ({ type, changeType }) => {
                 let code = error.code; // saving error code in variable
                 console.log(code);
                 if (!code) {
+                    goToHome();
                     return;
                 }
                 code = code.replaceAll("-", " "); // some JS string magic to display error message. See the log above in the console
