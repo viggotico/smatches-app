@@ -4,8 +4,8 @@ import profilePicture from "../assets/people/self/pexels-jonaorle-5673896.jpg"; 
 import { Link } from "react-router-dom";
 
 export const ProfilPage = () => {
-  const [name, setName] = useState("Sarah");
-  const [age, setAge] = useState(23);
+  const [name, setName] = useState(localStorage.getItem('name') || 'Sarah');
+  const [age, setAge] = useState(parseInt(localStorage.getItem('age') || '23') ?? '23');
   const [city, setCity] = useState("Viby");
 
   return (
