@@ -1,0 +1,163 @@
+/* Base styling for the form */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Image section with grid layout */
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-image,
+.empty-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+}
+
+/* Add a plus sign in the empty-image */
+.empty-image::before {
+  content: "+";
+  font-size: 34px; /* Adjust the size of the plus sign as needed */
+  color: #666; /* Set the color of the plus sign */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the plus sign */
+}
+
+.profile-pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.4;
+  margin-top: -43%;
+  margin-left: -15%;
+}
+
+.important {
+  color: #c90404; /* Red color for emphasis */
+  font-weight: 700;
+}
+
+/* About Me section */
+/* Style for the headers */
+.section-label{
+    margin-bottom: 20px;
+}
+.about-me-section label,
+.goals-section label,
+.traits-section label,
+.height-section label {
+  display: block;
+  margin-bottom: 24px; /* Adjust this value as needed for spacing */
+  color: #ff6961; /* Red color for emphasis, if needed */
+}
+
+/* Adjust other labels similarly */
+label {
+  font-weight: bold;
+}
+.about-me-input {
+  width: 95%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  resize: none;
+}
+
+/* Dating Goals section */
+.goals-section {
+  margin-bottom: 30px;
+}
+
+.goal-options {
+  display: flex;
+  gap: 10px;
+}
+
+.goal-option {
+  flex: 1;
+  padding: 25px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.h1{
+    font-size: 1rem;;
+}
+
+/* Toxic Traits section */
+.traits-section {
+  margin-bottom: 30px;
+}
+
+.traits-options {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* Height section */
+.height-section {
+  margin-bottom: 30px;
+}
+
+.height-input {
+  width: 95%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Extra section */
+.extra-section {
+  background-color: #333;
+  padding: 50px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* interactive output */
+/* Active state for goal options */
+.goal-option.active {
+  background-color: #ff6961;
+  color: #fff;
+}
+
+/* Active state for toxic traits */
+.traits-options span.active {
+  background-color: #ff6961;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
