@@ -22,8 +22,8 @@ export const RootLayout = ({ }) => {
         </div>
         <nav className="group-row navBottom">
             <div
-                className={`group-column navBottomItem${path === '/' ? ' navBottomItemActive' : ''}`}
-                onClick={() => navivate('/')}
+                className={`group-column navBottomItem${path === '/home' ? ' navBottomItemActive' : ''}`}
+                onClick={() => navivate('/home')}
             >
                 <ExploreIcon className="navBottomItemIcons" />
                 Opdag

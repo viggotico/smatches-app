@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+
+import { onAuthStateChanged } from "@firebase/auth";
+import "./firebase-config";
+import { auth } from "./firebase-config";
+
 import { LoginPage } from "./pages/LoginPage";
 import { OpdagPage } from "./pages/OpdagPage";
 import { RootLayout } from "./components/RootLayout";
@@ -9,6 +15,22 @@ import {ChatPage} from "./pages/ChatPage";
 import { SettingsPage } from './pages/SettingsPage';
 
 export const App = () => {
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+
+  useEffect(() => {
+    onAuthStateChanged(auth, user => {
+      if (user) {
+        if (isAuth) return;
+        setIsAuth(true);
+        localStorage.setItem("isAuth", true);
+      } else {
+        if (!isAuth) return;
+        setIsAuth(false);
+        localStorage.removeItem("isAuth");
+      }
+    });
+  }, []);
+
   return <BrowserRouter>
     <Routes>
       <Route index element={<LoginPage />} />
