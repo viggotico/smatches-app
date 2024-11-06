@@ -135,6 +135,12 @@ const LoginSequence = ({ type, changeType }) => {
         </fieldset>;
     }
 
+    const goToHome = () => {
+        console.log('going to home');
+        if (location.href.includes('smatches-app.vercel.app')) location.href = 'https://smatches-app.vercel.app/home';
+        if (location.href.includes('smatches.deltabox.studio')) location.href = 'https://smatches.deltabox.studio/home';
+        if (location.href.includes('localhost:5173')) location.href = 'http://localhost:5173/home';
+    }
 
     function signIn() {
         const mail = localStorage.getItem('email');
@@ -155,10 +161,7 @@ const LoginSequence = ({ type, changeType }) => {
                 // Signed in
                 const user = userCredential.user;
                 console.log(user); // for test purposes: logging the authenticated user
-                console.log('going to home');
-                if (location.href.includes('smatches-app.vercel.app')) location.href = 'https://smatches-app.vercel.app/home';
-                if (location.href.includes('smatches.deltabox.studio')) location.href = 'https://smatches.deltabox.studio/home';
-                if (location.href.includes('localhost:5173')) location.href = 'http://localhost:5173/home';
+                goToHome();
             })
             .catch(error => {
                 let code = error.code; // saving error code in variable
@@ -195,6 +198,7 @@ const LoginSequence = ({ type, changeType }) => {
                 const user = userCredential.user;
                 console.log(user);
                 createUser(user.uid, mail);
+                goToHome();
             })
             .catch(error => {
                 let code = error.code; // saving error code in variable
