@@ -18,11 +18,16 @@ export const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
   useEffect(() => {
-    localStorage.removeItem("isAuth");
-    localStorage.removeItem("name");
-    localStorage.removeItem("age");
-    localStorage.removeItem("email");
-    localStorage.removeItem("password");
+    if (location.href.endsWith('.studio') ||
+        location.href.endsWith('.studio/') ||
+        location.href.endsWith(':5173') ||
+        location.href.endsWith(':5173/')) {
+          localStorage.removeItem("isAuth");
+          localStorage.removeItem("name");
+          localStorage.removeItem("age");
+          localStorage.removeItem("email");
+          localStorage.removeItem("password");
+    }
     onAuthStateChanged(auth, user => {
       if (user) {
         if (isAuth) return;
