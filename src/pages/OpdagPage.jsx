@@ -35,7 +35,7 @@ const confettiMarry = new JSConfetti();
 const confettiSmash = new JSConfetti();
 const confettiOptions = {
     confettiNumber: 30,
-    emojiSize: 80,
+    emojiSize: 40,
 }
 
 const bilal = {

@@ -1,0 +1,120 @@
+.chat-page{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    height: var(--section-height);
+    background-color: #1c1c1e;
+    color: white;
+    padding: 10px;
+}
+
+.chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.back-button, .profile-button{
+    background: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 3px 12px;
+    border-radius: 7px;
+}
+
+.icebreakers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    background-color: #222830;
+    border-radius: 10px;
+}
+
+.icebreakers p {
+    color: white;
+}
+.icebreakers span {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 4px;
+}
+.button-container {
+    display: flex;
+    gap: 4px;
+}
+.icebreakers button{
+    background: #333;
+    color: white;
+    border: none;
+    padding: 4px 8px ;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+ 
+}
+
+.chat-messages{
+    flex: 1;
+    padding: 10px;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.message{
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.received {
+    background: #444;
+    color: white;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px 0;
+}
+
+.chat-input input{
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+}
+
+.send-button {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.feedContainerLeft{
+    width: 100%;
+}
+.feedContainerRight{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.feedMsg{
+    background-color:#444;
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+

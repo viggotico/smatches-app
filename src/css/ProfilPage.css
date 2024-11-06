@@ -1,0 +1,115 @@
+.profile-section {
+  position: relative;
+  height: var(--section-height);
+  font-family: Arial, sans-serif;
+}
+
+.profile-header {
+  text-align: right; 
+  font-size: 0.8rem;
+}
+
+.settings-link {
+  text-decoration: none; /* Fjerner understregningen */
+  color: white; /* Farve på teksten */
+  font-size: 2em; /* Størrelsen matcher en h1 */
+  font-weight: bold; /* Gør teksten fed */
+}
+
+.profile-container {
+ display: flex;
+ flex-direction: row;
+    justify-content: flex-start;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.profile-picture {
+  width: 170px;
+  height: 170px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* To kolonner */
+  gap: 10px; /* Mellemrum mellem kolonnerne */
+  background-color: #2e2e2e; /* Mørk baggrund */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.profile-info p {
+  margin: 5px 0; /* Mellemrum mellem rækker */
+  color: #9a9a9a; /* Lysere grå til labels */
+  padding-bottom: 5px; /* Plads til linjen */
+  border-bottom: 1px solid #444; /* Linje under teksten */
+}
+
+.profile-info strong {
+  color: #ffffff; /* Hvid tekst til værdier */
+  text-align: right; /* Tekst højrejusteres for værdier */
+}
+
+.profile-options {
+  margin-top: 10px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #2e2e2e;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.option p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.option1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  align-items: center;
+  padding: 30px;
+  background-color: #2e2e2e;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%; /* Begrænser bredden til skærmen */
+  box-sizing: border-box; /* Sørger for, at padding bliver inkluderet i bredden */
+}
+
+.option1 p {
+  margin: 0;
+  color: #a79c9c;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  font-size: 0.2rem; /* Øger fontstørrelsen */
+  text-align: justify;
+  max-width: 90%; /* Begrænser bredden af teksten til lidt mindre end boksens fulde bredde */
+  line-height: 1.5; /* Giver mere plads mellem linjerne, så teksten fylder mere vertikalt */
+}
+
+.optionp{
+  color: aqua;
+}
